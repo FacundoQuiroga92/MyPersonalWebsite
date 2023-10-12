@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
+    /* font-family: 'Roboto', sans-serif; */
+  }
+/* estilos globales */
+.button{
+    border-radius: 20px;
+    padding: 13px;
+}
+
+/* Navbar */
+  nav{
+    display: flex; /* Hace que los elementos internos se alineen en una fila */
+    justify-content: center; /* Distribuye el espacio disponible de manera uniforme entre los elementos internos */
+    align-items: center; /* Centra verticalmente los elementos internos */
+    background-color: #333; /* Color de fondo para la barra de navegación */
+    color: #fff; /* Color de texto para los elementos de navegación */
+    padding: 10px 20px; /* Espaciado interno para la barra de navegación */
+  }
+  .navUl {
+    list-style: none; /* Elimina los puntos de lista predeterminados */
+    display: flex; /* Hace que los elementos de la lista se muestren en una fila */
+    gap: 20px; /* Espacio entre los elementos de la lista */    
+  }  
+  .navUlLi {
+    padding: 0; 
+    font-size: 22px;
+    
+  } 
+  /* enlaces del nav */
+  .navUlLi-a{
+    text-decoration: none;
+    color: #fff;
+  }
+
+  /* main */
+  .mainContainer, .aboutContainer{
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+ .mainImg{
+    border-radius: 50%;
+    height: 50vh;
+ }
+/* About Me */
+.aboutContainer{
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.aboutImg{
+    height: 50vh;
+    border-radius: 17px;
+}
+.aboutDescription{
+    font-size: 20px;
+    margin: 12px;
+}
+.title{
+    display: flex;
+    justify-content: center;
+}
+
+/* skills */
+.buttonFilter{
+    padding: 5px;
+    border-radius: 3px;
+}
+.buttonSkills, .buttonsContainer{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    gap: 3px;
+}
+/* portfolio */
+
+.containerCards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.cardPortfolio{
+    background-color: #494747;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 300px; 
+    /* flex-grow: 1; */
+    
+    padding: 10px;
+    color: #fff;
+    margin: 10px;
+    border-radius: 15px;
+}
+.imgPortfolio{
+    width: 100%;
+    border-radius: 15px;
+}
+/* skills */
+.ContainerSkillsAndTools{
+  background-color: #494747;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.imgSkill{
+  width: 90px;
+}
+
+/* footer */
+#footer{
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    
+}
+.footerText{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
