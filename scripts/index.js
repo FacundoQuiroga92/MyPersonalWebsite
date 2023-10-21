@@ -6,31 +6,31 @@ const lenguajesAndTools = [
     {
       categoria:"lenguaje",
       name:"html",
-      img:"https://i.pinimg.com/564x/e3/b8/10/e3b810bb6bf005c04b256c6cbcca3efb.jpg",
+      img:"https://img.icons8.com/color/96/html-5--v1.png",
       level:"avanzado"  
     },
     {
       categoria:"lenguaje",
       name:"css",
-      img:"https://i.pinimg.com/564x/d5/d7/a7/d5d7a7544152bf71f6ec9d8180c40c0d.jpg",
+      img:"https://img.icons8.com/color/96/css3.png",
       level:"intermedio"
     },
     {
       categoria:"lenguaje",
       name:"javascript",
-      img:"https://i.pinimg.com/564x/28/75/3d/28753ddf79d70042ba86564947e13bf5.jpg",
+      img:"https://img.icons8.com/fluency/96/javascript.png",
       level:"intermedio"
     },
     {
       categoria:"lenguaje",
       name:"react",
-      img:"https://i.pinimg.com/564x/dd/59/fa/dd59fa7de174a7f73f993e7d73099f20.jpg",
+      img:"https://img.icons8.com/color/96/react-native.png",
       level:"intermedio"
     },
     {
       categoria:"tool",
       name:"git",
-      img:"https://i.pinimg.com/564x/66/8f/03/668f031e4dde7816c77d8e36b080a94f.jpg",
+      img:"https://img.icons8.com/color/96/git.png",
       level:"avanzado"
     },
     {
@@ -38,6 +38,12 @@ const lenguajesAndTools = [
       name:"npm",
       img:"https://img.icons8.com/color/48/npm.png",
       level:"basico"
+    },
+    {
+      categoria:"tool",
+      name:"wordpress",
+      img:"https://img.icons8.com/3d-fluency/94/wordpress.png",
+      level:"intermedio"
     },
     
 ]
@@ -63,8 +69,9 @@ const renderizarSkils = (array)=>{
     let title = document.createElement("p")
     title.innerText = item.name
 
-    card.appendChild(title)
+    
     card.appendChild(cardImg)
+    /* card.appendChild(title) */
     cardsLenguajes.appendChild(card)
   }
 }

@@ -12,13 +12,26 @@
     padding: 13px;
 }
 
+/* colores */
+:root {
+  --color-titulos: #f30b3c; /* Por ejemplo, azul primario */
+  --color-titulosV2: #865dff;
+  --color-secundario: #191825; /* Por ejemplo, gris secundario */
+  --color-letras: #ffc8d0; /* Por ejemplo, naranja destacado */
+  --color-letrasV2: #fe9b67;
+  --color-letrasV3: #ffa3fd;
+}
+body{
+  background-color: var(--color-secundario);
+  color: var(--color-letras);
+}
 /* Navbar */
   nav{
     display: flex; /* Hace que los elementos internos se alineen en una fila */
     justify-content: center; /* Distribuye el espacio disponible de manera uniforme entre los elementos internos */
     align-items: center; /* Centra verticalmente los elementos internos */
-    background-color: #333; /* Color de fondo para la barra de navegación */
-    color: #fff; /* Color de texto para los elementos de navegación */
+    background-color: var(--color-secundario); /* Color de fondo para la barra de navegación */
+    color: var(--color-titulos); /* Color de texto para los elementos de navegación */
     padding: 10px 20px; /* Espaciado interno para la barra de navegación */
   }
   .navUl {
@@ -29,14 +42,33 @@
   .navUlLi {
     padding: 0; 
     font-size: 22px;
-    
   } 
+  
   /* enlaces del nav */
   .navUlLi-a{
+    position: relative;
     text-decoration: none;
-    color: #fff;
+    color: var(--color-titulos);
   }
-
+  .navUlLi-a::before, .navUlLi-a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0; /* Inicialmente la línea no tiene ancho */
+    height: 2px; /* Altura de la línea */
+    bottom: -2px; /* Coloca la línea justo por debajo del enlace */
+    background: #f30b3c; /* Color de la línea */
+    transition: width 0.3s ease; /* Transición suave para el ancho */
+  }
+  .navUlLi-a::before {
+    right: 100%; /* Inicialmente, la línea comienza desde la izquierda del enlace */
+  }
+  
+  .navUlLi-a:hover::before {
+    width: 100%; /* Al pasar el puntero, la línea crece hacia la derecha */
+  }
+  
+  
   /* main */
   .mainContainer, .aboutContainer{
     display: flex;
@@ -47,6 +79,13 @@
  .mainImg{
     border-radius: 50%;
     height: 50vh;
+ }
+ .main-title{
+  color: var(--color-titulos);
+  font-size: 3rem;
+ }
+ .main-subtitle{
+  font-size: 1.5rem;
  }
 /* About Me */
 .aboutContainer{
@@ -66,12 +105,25 @@
 .title{
     display: flex;
     justify-content: center;
+    color: var(--color-titulos);
+    font-size: 2rem;
 }
 
 /* skills */
 .buttonFilter{
-    padding: 5px;
-    border-radius: 3px;
+  background-color: var(--color-secundario);
+  color: var(--color-titulos); 
+  border: 1px bold #ff647b; 
+  border-radius: 10px; 
+  padding: 10px 20px; 
+  cursor: pointer; 
+  font-size: 1rem;
+  margin: 10px;
+}
+.buttonFilter:hover {
+  background-color: var(--color-titulos);
+  color: var(--color-secundario); 
+  transition: background-color 0.3s ease, color 0.3s ease; 
 }
 .buttonSkills, .buttonsContainer{
     display: flex;
@@ -79,6 +131,7 @@
     margin: 10px;
     gap: 3px;
 }
+
 /* portfolio */
 
 .containerCards{
@@ -113,7 +166,8 @@
   justify-content: space-around;
 }
 .imgSkill{
-  width: 90px;
+  width: 80px;
+  
 }
 
 /* footer */
