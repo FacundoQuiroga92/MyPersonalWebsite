@@ -157,19 +157,57 @@ body{
     width: 100%;
     border-radius: 15px;
 }
+
+#portfolio{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-group{
+  max-width: 1260px;
+  display: flex;
+  column-gap: 20px;
+  padding: 60px;
+  justify-content: space-evenly;
+}
+.card1{
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  background-image: linear-gradient(85deg,#434343,#262626);
+  padding: 32px;
+  box-shadow: -16px 0 32px
+  rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  transition: transform 250ms;
+}
+.card1:not(:first-child){
+  margin-left: -130px;
+
+}
+.card1:hover{
+  transform: translate(-8px, -16px)
+  rotate(3deg);
+}
+.card1:hover ~ .card1{
+  transform: translateX(130px);
+}
 /* skills */
 .ContainerSkillsAndTools{
-  background-color: #494747;
+  
+  background-image: linear-gradient(85deg,#504f4f,#262626);
   color: white;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  height: 20vh;
+  align-items: center;
 }
 .imgSkill{
   width: 80px;
   
 }
-
 /* footer */
 #footer{
     background-color: black;
